@@ -1,19 +1,20 @@
 <template>
 	<div class="home">
-		<MainContainer>
-			<h1>Home Page</h1>
-		</MainContainer>
+		<Carusel />
+		<MainContainer></MainContainer>
 	</div>
 </template>
 
 <script>
 	// @ is an alias to /src
 	import MainContainer from '../components/MainContainer'
+	import Carusel from '../components/Carusel'
 
 	export default {
 		name: 'Home',
 		components: {
 			MainContainer,
+			Carusel,
 		},
 	}
 </script>
