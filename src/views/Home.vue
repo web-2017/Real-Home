@@ -18,7 +18,27 @@
 			</div>
 		</div>
 		<Feauters :data="featureData" />
-		<Properties :propertiesData="propertiesData" />
+
+		<div class="properties">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<h2 class="properties__h2">
+							Featured
+							<b>Properties</b>
+						</h2>
+					</div>
+					<div class="col-md-12 col-sm-12">
+						<p class="properties__subtitle">
+							Quisque diam lorem interdum vitaapibus vitae pede. Donec eget tellus non erat lacinia fertum. Donec in
+							velit vel ipsum auctovinar.
+						</p>
+					</div>
+				</div>
+
+				<Properties :propertiesData="propertiesData" />
+			</div>
+		</div>
 	</div>
 </template>
 

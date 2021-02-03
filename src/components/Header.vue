@@ -4,8 +4,13 @@
 			<a class="navbar-brand logo" href="/"><img src="../assets/images/icons/logo.png" alt="logo" /></a>
 			<div class="collapse collapse-fontsize navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-lg-0">
-					<li class="nav-item menu-link" v-for="(menu, index) in headerMenuList" :key="index">
-						<router-link class="nav-link active" aria-current="page" :to="menu.path">
+					<li
+						class="nav-item menu-link"
+						v-for="(menu, index) in headerMenuList"
+						:key="index"
+						:class="isActiveClassHadnler(menu.path)"
+					>
+						<router-link class="nav-link" aria-current="page" :to="menu.path" exact>
 							{{ menu.name }}
 						</router-link>
 					</li>
@@ -24,14 +29,16 @@
 <script>
 	import { menuList } from '../constants/menuLinks'
 	export default {
-		name: 'HelloWorld',
-		props: {
-			msg: String,
-		},
+		name: 'Header',
 		data() {
 			return {
 				headerMenuList: menuList,
 			}
+		},
+		methods: {
+			isActiveClassHadnler(link) {
+				return link === this.$route.path ? 'header__isActive' : ''
+			},
 		},
 	}
 </script>
@@ -40,7 +47,16 @@
 	@import '../assets/layouts/index';
 	.navbar {
 		height: 90px;
+
+		.nav-link {
+			white-space: nowrap;
+		}
 	}
+
+	.header__isActive {
+		background: $greyLight;
+	}
+
 	.navbar-nav {
 		height: 90px;
 	}
@@ -59,6 +75,7 @@
 	}
 
 	.icons {
+		width: 180px;
 		a {
 			width: 30px;
 			height: 30px;
