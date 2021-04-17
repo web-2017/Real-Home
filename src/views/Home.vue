@@ -1,6 +1,6 @@
 <template>
 	<div class="home">
-		<Carusel />
+		<carusel />
 		<div class="container home__offering">
 			<div class="row">
 				<div class="col-md-4 home_border">
@@ -17,7 +17,7 @@
 				</div>
 			</div>
 		</div>
-		<Feauters :data="featureData" />
+		<feauters :data="featureData" />
 
 		<div class="properties">
 			<div class="container">
@@ -37,8 +37,14 @@
 				</div>
 
 				<Properties :propertiesData="propertiesData" />
-				
+
+			
+
 			</div>
+		</div>
+
+		<div class="home__slider">
+			<carousel-picture-content/>
 		</div>
 	</div>
 </template>
@@ -50,6 +56,7 @@
 	import Carusel from '../components/Carusel'
 	import Feauters from '../components/Feauters'
 	import Properties from '../components/Properties'
+	import CarouselPictureContent from '../components/CarouselPictureContent'
 
 	export default {
 		name: 'Home',
@@ -57,6 +64,7 @@
 			Carusel,
 			Feauters,
 			Properties,
+			CarouselPictureContent
 		},
 		data() {
 			return {
