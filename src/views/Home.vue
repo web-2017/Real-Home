@@ -37,6 +37,7 @@
 				</div>
 
 				<Properties :propertiesData="propertiesData" />
+				
 			</div>
 		</div>
 	</div>
