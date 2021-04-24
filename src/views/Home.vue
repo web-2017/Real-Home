@@ -38,8 +38,6 @@
 
 				<properties :propertiesData="propertiesData" />
 
-			
-
 			</div>
 		</div>
 
