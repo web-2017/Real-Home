@@ -44,9 +44,15 @@
 		<div class="home__slider">
 			<carousel-picture-content/>
 		</div>
+		<!-- banner -->
 		<div class="home__banner">
 			<banner />
 		</div>
+		<!-- Testimonials -->
+		<div class="home__testimonials testimonials">
+			<testimonials/>
+		</div>
+
 	</div>
 </template>
 
@@ -59,6 +65,8 @@
 	import Properties from '../components/Properties'
 	import CarouselPictureContent from '../components/CarouselPictureContent'
 	import Banner from '../components/Banner'
+	import Testimonials from '../components/Testimonials'
+	
 
 	export default {
 		name: 'Home',
@@ -67,7 +75,8 @@
 			Feauters,
 			Properties,
 			CarouselPictureContent,
-			Banner
+			Banner,
+			Testimonials
 		},
 		data() {
 			return {

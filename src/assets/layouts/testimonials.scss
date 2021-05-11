@@ -1,0 +1,32 @@
+.testimonials {
+	.carousel-dark .carousel-control-next-icon,
+	.carousel-dark .carousel-control-prev-icon {
+		filter: invert(0) grayscale(100);
+	}
+
+	#carouselTestimonials,
+	.carousel-item {
+		height: 580px;
+		img {
+			height: 100%;
+			display: block;
+		}
+	}
+	.carousel-control-prev,
+	.carousel-control-next {
+		background: transparent;
+		border: none;
+		color: #fff;
+	}
+
+	&__slide {
+		height: 340px;
+		max-width: 700px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.carousel-indicators {
+		padding-bottom: 120px;
+	}
+}
